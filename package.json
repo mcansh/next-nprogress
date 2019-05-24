@@ -6,8 +6,8 @@
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
   "main": "dist/index.js",
-  "umd:main": "dist/next-nprogress.umd.production.js",
-  "module": "dist/next-nprogress.es.production.js",
+  "umd:main": "dist/mcanshnext-progress.umd.production.js",
+  "module": "dist/mcanshnext-progress.es.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
