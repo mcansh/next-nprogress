@@ -1,0 +1,55 @@
+{
+  "name": "@mcansh/next-nprogress",
+  "version": "1.0.0",
+  "description": "Easily integrate NProgress inside your Next.js app using styled-components",
+  "repository": "https://github.com/mcansh/next-nprogress",
+  "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "umd:main": "dist/next-nprogress.umd.production.js",
+  "module": "dist/next-nprogress.es.production.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom"
+  },
+  "peerDependencies": {
+    "next": "^6.0.0 || ^7.0.0 || ^8.0.0",
+    "nprogress": ">=0.2.0",
+    "react": ">=16",
+    "styled-components": ">=4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/nprogress": "^0.0.29",
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.15",
+    "husky": "^2.3.0",
+    "next": "^8.1.1-canary.37",
+    "nprogress": "^0.2.0",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0",
+    "tsdx": "^0.5.11",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
+  }
+}
