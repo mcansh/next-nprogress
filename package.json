@@ -18,7 +18,8 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --env=jsdom"
+    "test": "tsdx test --env=jsdom",
+    "prepare": "yarn build"
   },
   "peerDependencies": {
     "next": "^6.0.0 || ^7.0.0 || ^8.0.0",
