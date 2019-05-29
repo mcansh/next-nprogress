@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import NProgress from '../src';
+import { NProgress } from '../src';
 
 describe('it', () => {
   it('renders without crashing', () => {
