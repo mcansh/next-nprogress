@@ -1,7 +1,7 @@
 import React from 'react';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
 
 /* NProgress isn't exporting NProgressConfigureOptions */
 interface NProgressConfigureOptions {
@@ -46,12 +46,14 @@ interface NProgressConfigureOptions {
   template?: string;
 }
 
-interface Props {
-  showAfterMs?: number;
-  options?: NProgressConfigureOptions;
-  color?: string;
-  spinner?: boolean;
-}
+const spinner = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const Progress = createGlobalStyle<Props>`
   #nprogress {
@@ -96,7 +98,7 @@ const Progress = createGlobalStyle<Props>`
     border-top-color: ${props => props.color};
     border-left-color: ${props => props.color};
     border-radius: 50%;
-    animation: nprogress-spinner 400ms linear infinite;
+    animation: ${spinner} 400ms linear infinite;
   }
 
   .nprogress-custom-parent {
@@ -108,16 +110,15 @@ const Progress = createGlobalStyle<Props>`
   .nprogress-custom-parent #nprogress .bar {
     position: absolute;
   }
-
-  @keyframes nprogress-spinner {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 `;
+
+interface Props {
+  showAfterMs?: number;
+  options?: NProgressConfigureOptions;
+  color?: string;
+  spinner?: boolean;
+  children?: never;
+}
 
 class NProgressContainer extends React.Component<Props> {
   static defaultProps = {
@@ -159,8 +160,9 @@ class NProgressContainer extends React.Component<Props> {
   };
 
   render() {
-    return <Progress {...this.props} />;
+    const { color, spinner } = this.props;
+    return <Progress color={color} spinner={spinner} />;
   }
 }
 
-export default NProgressContainer;
+export { NProgressContainer as NProgress };
