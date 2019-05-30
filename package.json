@@ -9,6 +9,9 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "yarn build",
     "dev": "microbundle watch --jsx React.createElement --format cjs,es --external 'styled-components' --compress false",
