@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/next-nprogress",
-  "version": "1.0.1-canary.0",
+  "version": "1.1.0-canary.0",
   "description": "Easily integrate NProgress inside your Next.js app using styled-components",
   "repository": "git://github.com/mcansh/next-nprogress.git",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
