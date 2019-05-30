@@ -1,39 +1,36 @@
 {
-  "include": [
-    "src",
-    "types"
-  ],
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
     "lib": [
       "dom",
-      "esnext"
+      "es2017"
     ],
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": "./",
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "baseUrl": "./",
+    "strict": true,
+    "target": "esnext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "paths": {
-      "*": [
-        "src/*",
-        "node_modules/*"
+      "~/*": [
+        "./*"
       ]
     },
-    "jsx": "react",
-    "esModuleInterop": true
-  }
+  },
+  "exclude": [],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
