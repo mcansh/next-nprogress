@@ -166,3 +166,4 @@ class NProgressContainer extends React.Component<Props> {
 }
 
 export { NProgressContainer as NProgress };
+
