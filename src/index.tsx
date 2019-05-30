@@ -46,7 +46,7 @@ interface NProgressConfigureOptions {
   template?: string;
 }
 
-const spinner = keyframes`
+const Spinner = keyframes`
   0% {
     transform: rotate(0deg);
   }
@@ -98,7 +98,7 @@ const Progress = createGlobalStyle<Props>`
     border-top-color: ${props => props.color};
     border-left-color: ${props => props.color};
     border-radius: 50%;
-    animation: ${spinner} 400ms linear infinite;
+    animation: ${Spinner} 400ms linear infinite;
   }
 
   .nprogress-custom-parent {
@@ -166,4 +166,3 @@ class NProgressContainer extends React.Component<Props> {
 }
 
 export { NProgressContainer as NProgress };
-

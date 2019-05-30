@@ -38,6 +38,7 @@
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-kentcdodds": "14.3.2",
+    "eslint-config-mcansh": "1.1.1",
     "eslint-config-prettier": "4.3.0",
     "eslint-plugin-import": "2.17.3",
     "eslint-plugin-jsx-a11y": "6.2.1",
@@ -48,6 +49,7 @@
     "husky": ">=1",
     "lint-staged": ">=8",
     "microbundle": "0.11.0",
+    "prettier": "1.17.1",
     "typescript": "3.5.1"
   },
   "dependencies": {
