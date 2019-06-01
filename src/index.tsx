@@ -1,49 +1,14 @@
 import React from 'react';
-import NProgress from 'nprogress';
+import NProgress, { NProgressOptions } from 'nprogress';
 import Router from 'next/router';
 import { createGlobalStyle, keyframes } from 'styled-components';
 
-/* NProgress isn't exporting NProgressConfigureOptions */
-interface NProgressConfigureOptions {
-  /**
-   * CSS selector to change the parent DOM element of the progress. Default is body.
-   */
-  parent?: string;
-
-  /**
-   * The minimum progress percentage. Default is 0.08.
-   */
-  minimum?: number;
-
-  /**
-   * How often to trickle, in milliseconds. Default is 800.
-   */
-  trickleSpeed?: number;
-
-  /**
-   * Whether to show the spinner. Defaults to true. Default is true.
-   */
-  showSpinner?: boolean;
-
-  /**
-   * Whether to enable trickling the progress. Default is true.
-   */
-  trickle?: boolean;
-
-  /**
-   * The CSS easing animation to use. Default is 'linear'.
-   */
-  easing?: string;
-
-  /**
-   * The animation speed in milliseconds. Default is 200.
-   */
-  speed?: number;
-
-  /**
-   * The HTML markup inserted for the progress indicator. To keep the progress bar working, keep an element with role='bar' in there.
-   */
-  template?: string;
+interface Props {
+  showAfterMs?: number;
+  options?: Partial<NProgressOptions>;
+  color?: string;
+  spinner?: boolean;
+  children?: never;
 }
 
 const Spinner = keyframes`
@@ -112,14 +77,6 @@ const Progress = createGlobalStyle<Props>`
   }
 `;
 
-interface Props {
-  showAfterMs?: number;
-  options?: NProgressConfigureOptions;
-  color?: string;
-  spinner?: boolean;
-  children?: never;
-}
-
 class NProgressContainer extends React.Component<Props> {
   static defaultProps = {
     color: '#2299DD',
@@ -166,3 +123,4 @@ class NProgressContainer extends React.Component<Props> {
 }
 
 export { NProgressContainer as NProgress };
+export { NProgressOptions, NProgress as NProgressInterface } from 'nprogress';
