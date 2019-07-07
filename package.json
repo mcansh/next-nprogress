@@ -15,9 +15,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "prepublishOnly": "yarn build",
     "dev": "microbundle watch --jsx React.createElement --format cjs,es --external 'styled-components' --compress false",
