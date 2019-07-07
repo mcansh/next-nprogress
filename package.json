@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/next-nprogress",
-  "version": "1.1.0-canary.5",
+  "version": "1.1.0-canary.6",
   "description": "Easily integrate NProgress inside your Next.js app using styled-components",
   "repository": {
     "type": "git",
@@ -15,6 +15,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "prepublishOnly": "yarn build",
     "dev": "microbundle watch --jsx React.createElement --format cjs,es --external 'styled-components' --compress false",
