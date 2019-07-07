@@ -1,6 +1,6 @@
 # @mcansh/next-progress
 
-Easily integreate NProgress into your Next.js app using styled-components
+Easily integreate [NProgress](https://github.com/rstacruz/nprogress) into your [Next.js](https://github.com/zeit/next.js) app using styled-components
 
 ## A note about typescript types
 
