@@ -50,14 +50,14 @@
     "eslint-plugin-react": "7.14.2",
     "eslint-plugin-react-hooks": "1.6.1",
     "husky": ">=3.0.0",
-    "lint-staged": ">=9.0.2",
+    "lint-staged": ">=9.1.0",
     "microbundle": "0.11.0",
     "prettier": "1.18.2",
     "typescript": "3.5.2"
   },
   "dependencies": {
-    "next": "8.1.1-canary.67",
-    "next-server": "8.1.1-canary.67",
+    "next": "8.1.1-canary.69",
+    "next-server": "8.1.1-canary.69",
     "nprogress": "0.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
