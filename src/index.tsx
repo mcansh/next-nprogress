@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import NProgress, { NProgressOptions } from 'nprogress';
 import Router from 'next/router';
 import { createGlobalStyle, keyframes } from 'styled-components';

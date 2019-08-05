@@ -2,23 +2,21 @@
   "name": "@mcansh/next-nprogress",
   "version": "1.1.0-canary.6",
   "description": "Easily integrate NProgress inside your Next.js app using styled-components",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com/mcansh/next-nprogress.git"
-  },
+  "repository": "mcansh/next-nprogress",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "source": "src/index.tsx",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "module": "dist/next-nprogress.esm.js",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "scripts": {
     "prepublishOnly": "yarn build",
-    "dev": "microbundle watch --jsx React.createElement --format cjs,es --external 'styled-components' --compress false",
-    "build": "microbundle --jsx React.createElement --format cjs,es --external 'styled-components'"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom"
   },
   "husky": {
     "hooks": {
@@ -32,10 +30,11 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "24.0.17",
     "@types/nprogress": "0.2.0",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
-    "@types/styled-components": "4.1.16",
+    "@types/styled-components": "4.1.18",
     "@typescript-eslint/eslint-plugin": "1.11.0",
     "@typescript-eslint/parser": "1.11.0",
     "eslint": "6.0.1",
@@ -49,14 +48,18 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.2",
     "eslint-plugin-react-hooks": "1.6.1",
-    "husky": ">=3.0.0",
+    "husky": "3.0.2",
     "lint-staged": ">=9.1.0",
-    "microbundle": "0.11.0",
     "prettier": "1.18.2",
+    "pretty-quick": "1.11.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "tsdx": "0.7.2",
+    "tslib": "1.10.0",
     "typescript": "3.5.2"
   },
   "dependencies": {
-    "next": "8.1.1-canary.69",
+    "next": "9.0.3",
     "next-server": "8.1.1-canary.69",
     "nprogress": "0.2.0",
     "react": "16.8.6",
@@ -67,8 +70,8 @@
     "next": ">=8.0.0",
     "next-server": ">=8.0.0",
     "nprogress": "^0.2.0",
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
     "styled-components": ">=4.0.0"
   }
 }
