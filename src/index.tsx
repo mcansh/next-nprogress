@@ -84,7 +84,7 @@ class NProgressContainer extends React.Component<Props> {
     spinner: true,
   };
 
-  timer: any = null;
+  timer: number | undefined = undefined;
 
   componentDidMount() {
     const { options } = this.props;
