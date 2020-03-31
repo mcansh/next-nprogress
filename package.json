@@ -70,7 +70,7 @@
     "typescript": "3.5.3"
   },
   "dependencies": {
-    "next": "9.0.5",
+    "next": "9.3.2",
     "next-server": "9.0.5",
     "nprogress": "0.2.0",
     "react": "16.9.0",
