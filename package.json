@@ -74,7 +74,6 @@
   },
   "peerDependencies": {
     "next": ">=8.0.0",
-    "next-server": ">=8.0.0",
     "nprogress": "^0.2.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
