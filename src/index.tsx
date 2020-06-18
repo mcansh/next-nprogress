@@ -78,15 +78,15 @@ const Progress = createGlobalStyle<Props>`
 `;
 
 class NProgressContainer extends React.Component<Props> {
-  static defaultProps = {
+  public static defaultProps = {
     color: '#2299DD',
     showAfterMs: 300,
     spinner: true,
   };
 
-  timer: number | undefined = undefined;
+  private timer: number | undefined = undefined;
 
-  componentDidMount() {
+  public componentDidMount(): void {
     const { options } = this.props;
 
     if (options) {
@@ -98,25 +98,25 @@ class NProgressContainer extends React.Component<Props> {
     Router.events.on('routeChangeError', this.routeChangeEnd);
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount(): void {
     clearTimeout(this.timer);
     Router.events.off('routeChangeStart', this.routeChangeStart);
     Router.events.off('routeChangeComplete', this.routeChangeEnd);
     Router.events.off('routeChangeError', this.routeChangeEnd);
   }
 
-  routeChangeStart = () => {
+  private routeChangeStart = () => {
     const { showAfterMs } = this.props;
     clearTimeout(this.timer);
     this.timer = setTimeout(NProgress.start, showAfterMs);
   };
 
-  routeChangeEnd = () => {
+  private routeChangeEnd = () => {
     clearTimeout(this.timer);
     NProgress.done();
   };
 
-  render() {
+  public render(): JSX.Element {
     const { color, spinner } = this.props;
     return <Progress color={color} spinner={spinner} />;
   }
